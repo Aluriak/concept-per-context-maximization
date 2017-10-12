@@ -1,1 +1,25 @@
-Question: How many edge/2 are necessary to maximize the number of concepts into a context of size n×m ?
+__Question:__ *How many edge/2 are necessary to maximize
+the number of concepts into a context of size n×m ?*
+
+This repo is about scripts that answers this question.
+
+
+## Naive implementation
+`main.py` implements the naive way : it uses `enumerate_contexts.lp` to
+enumerate all possible contexts for given various sizes of objects and attributes sets.
+It will then get the number of concepts for each context using `enumerate_concepts.lp`,
+and keep the contexts with the biggest number of concepts.
+
+As output, it will:
+
+- pretty print the contexts
+- create a file `solutions/full_stats.csv` affichable using [3D plotting](https://github.com/aluriak/3Dplot), with obj, att and #concept columns as x, y and z axis.
+
+The file `solutions/upto4×4_stats.csv` contains data for all contexts having between 1 and 4 objects/attributes.
+It can be plotted, giving something like:
+
+![solutions](solutions/upto4×4_stats.png)
+
+
+## With propagator
+Uncomplete, unworking, unfinished. See `propagator_attempt.py`.
