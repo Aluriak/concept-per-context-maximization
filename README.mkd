@@ -1,0 +1,1 @@
+Question: How many edge/2 are necessary to maximize the number of concepts into a context of size n×m ?

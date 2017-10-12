@@ -1,0 +1,5 @@
+.cache/
+Session.vim
+__pycache__/
+plot3d.py
+venv/
