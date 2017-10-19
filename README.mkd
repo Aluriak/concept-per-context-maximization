@@ -23,3 +23,155 @@ It can be plotted, giving something like:
 
 ## With propagator
 Uncomplete, unworking, unfinished. See `propagator_attempt.py`.
+
+
+## Clique neighborood study
+How the number of concepts evolve, considering the neighborood of a clique ?
+
+- a clique of four elements (1, 2, 3 and 4) is generated and fixed.
+- two elements may or may not be in relation with each others or the clique (5 and 6)
+- let's see what happen using `clique_neighbors.py` script.
+
+    CONTEXTS: 3968		BEST SOLUTION: 62
+    ################################################################################ 
+    GREATER SCORES
+    Maximal number of concepts
+      | 1 | 2 | 3 | 4 | 5 | 6
+    1 |   | X | X | X | X | X
+    2 | X |   | X | X | X | X
+    3 | X | X |   | X | X | X
+    4 | X | X | X |   | X | X
+    5 | X | X | X | X |   | X
+    6 | X | X | X | X | X |  
+
+      | 1 | 2 | 3 | 4 | 5 | 6
+    1 |   | X | X | X | X | X
+    2 | X |   | X | X | X | X
+    3 | X | X |   | X | X | X
+    4 | X | X | X |   | X | X
+    5 | X | X | X | X | X |  
+    6 | X | X | X | X |   | X
+
+      | 1 | 2 | 3 | 4 | 5 | 6
+    1 |   | X | X | X | X | X
+    2 | X |   | X | X | X | X
+    3 | X | X |   | X | X | X
+    4 | X | X | X |   | X | X
+    5 | X | X | X | X |   | X
+    6 | X | X | X | X | X |  
+
+      | 1 | 2 | 3 | 4 | 5 | 6
+    1 |   | X | X | X | X | X
+    2 | X |   | X | X | X | X
+    3 | X | X |   | X | X | X
+    4 | X | X | X |   | X | X
+    5 | X | X | X | X |   | X
+    6 | X | X | X | X | X |  
+
+    BEST SOLUTIONS:
+    CONCEPTS: 62 (14 in clique alone)
+    NUMBER OF SOLUTIONS: 4
+
+    ################################################################################ 
+    GREATER NEIGHBORS
+    Maximal number of neighbors that do not raise the number of concepts
+      | 1 | 2 | 3 | 4 | 5 | 6
+    1 |   | X | X | X | X | X
+    2 | X |   | X | X | X | X
+    3 | X | X |   | X | X |  
+    4 | X | X | X |   |   | X
+    5 | X | X | X |   |   | X
+    6 | X | X |   | X | X |  
+
+      | 1 | 2 | 3 | 4 | 5 | 6
+    1 |   | X | X | X | X | X
+    2 | X |   | X | X | X |  
+    3 | X | X |   | X | X | X
+    4 | X | X | X |   |   | X
+    5 | X | X | X |   |   | X
+    6 | X |   | X | X | X |  
+
+      | 1 | 2 | 3 | 4 | 5 | 6
+    1 |   | X | X | X | X |  
+    2 | X |   | X | X | X | X
+    3 | X | X |   | X | X | X
+    4 | X | X | X |   |   | X
+    5 | X | X | X |   |   | X
+    6 |   | X | X | X | X |  
+
+      | 1 | 2 | 3 | 4 | 5 | 6
+    1 |   | X | X | X | X | X
+    2 | X |   | X | X | X | X
+    3 | X | X |   | X |   | X
+    4 | X | X | X |   | X |  
+    5 | X | X |   | X |   | X
+    6 | X | X | X |   | X |  
+
+      | 1 | 2 | 3 | 4 | 5 | 6
+    1 |   | X | X | X | X | X
+    2 | X |   | X | X | X |  
+    3 | X | X |   | X |   | X
+    4 | X | X | X |   | X | X
+    5 | X | X |   | X |   | X
+    6 | X |   | X | X | X |  
+
+      | 1 | 2 | 3 | 4 | 5 | 6
+    1 |   | X | X | X | X |  
+    2 | X |   | X | X | X | X
+    3 | X | X |   | X |   | X
+    4 | X | X | X |   | X | X
+    5 | X | X |   | X |   | X
+    6 |   | X | X | X | X |  
+
+      | 1 | 2 | 3 | 4 | 5 | 6
+    1 |   | X | X | X | X | X
+    2 | X |   | X | X |   | X
+    3 | X | X |   | X | X | X
+    4 | X | X | X |   | X |  
+    5 | X |   | X | X |   | X
+    6 | X | X | X |   | X |  
+
+      | 1 | 2 | 3 | 4 | 5 | 6
+    1 |   | X | X | X | X | X
+    2 | X |   | X | X |   | X
+    3 | X | X |   | X | X |  
+    4 | X | X | X |   | X | X
+    5 | X |   | X | X |   | X
+    6 | X | X |   | X | X |  
+
+      | 1 | 2 | 3 | 4 | 5 | 6
+    1 |   | X | X | X | X |  
+    2 | X |   | X | X |   | X
+    3 | X | X |   | X | X | X
+    4 | X | X | X |   | X | X
+    5 | X |   | X | X |   | X
+    6 |   | X | X | X | X |  
+
+      | 1 | 2 | 3 | 4 | 5 | 6
+    1 |   | X | X | X |   | X
+    2 | X |   | X | X | X | X
+    3 | X | X |   | X | X | X
+    4 | X | X | X |   | X |  
+    5 |   | X | X | X |   | X
+    6 | X | X | X |   | X |  
+
+      | 1 | 2 | 3 | 4 | 5 | 6
+    1 |   | X | X | X |   | X
+    2 | X |   | X | X | X | X
+    3 | X | X |   | X | X |  
+    4 | X | X | X |   | X | X
+    5 |   | X | X | X |   | X
+    6 | X | X |   | X | X |  
+
+      | 1 | 2 | 3 | 4 | 5 | 6
+    1 |   | X | X | X |   | X
+    2 | X |   | X | X | X |  
+    3 | X | X |   | X | X | X
+    4 | X | X | X |   | X | X
+    5 |   | X | X | X |   | X
+    6 | X |   | X | X | X |  
+
+    BEST SOLUTIONS:
+    NUMBER OF NEIGHBORS: 16
+    NUMBER OF SOLUTIONS: 12
+

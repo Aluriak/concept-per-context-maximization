@@ -11,6 +11,12 @@ MAX_DIM_SIZE = 3
 
 def draw_context(atoms:iter):
     """Draw given context is stdout"""
+    # print('JJONNY:', type(atoms))
+    # print('AMONDS:', atoms)
+    if isinstance(atoms, str):
+        atoms = next(clyngor.solve([], inline=atoms).int_not_parsed)
+    # print('JJONNY:', type(atoms))
+    # print('AMONDS:', tuple(atoms))
     objs, atts = set(), set()
     have = defaultdict(set)
     for _, (obj, att) in atoms:
@@ -42,7 +48,6 @@ def max_number_of_concepts(nobj:int, natt:int):
         elif nb_concept == best_score:
             best_atoms.append(atoms)
     print()
-
     print('BEST SOLUTIONS:')
     print('CONCEPTS:', best_score)
     for atoms in best_atoms:
