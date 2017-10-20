@@ -14,3 +14,9 @@ t: tests
 tests:
 	python -m pytest *.py
 
+
+
+neighbors:
+	python clique_neighbors.py
+size:
+	python clique_size.py
