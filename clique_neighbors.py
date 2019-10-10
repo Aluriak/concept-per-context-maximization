@@ -23,7 +23,7 @@ def supplementary_relations(nodes:tuple, max_neighbors:int, allow_linked_neighbo
     allow_linked_neighbors -- if True, allow added nodes to be in relation to each others
 
     """
-    def all_combinations(tps:tuple, start:int=1) -> iter:
+    def all_combinations(tps:tuple, start:int=0) -> iter:
         for size in range(start, 1+len(tps)):
             yield from itertools.combinations(tps, size)
 
