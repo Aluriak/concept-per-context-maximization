@@ -13,7 +13,7 @@ def get_clique_table(min_size:int, max_size:int):
         concepts.append(str(number_of_concepts_in(clique)).rjust(5))
 
     template = r"""
-\begin{{figure}}[H]
+\begin{{table}}[H]
     \centering\begin{{tabular}}{{|l|{}|}}
         \hline
          clique size  & {} \\\hline
@@ -21,7 +21,7 @@ def get_clique_table(min_size:int, max_size:int):
     \end{{tabular}}
     \caption{{Number of concepts produced by a clique of given size in a non-reflexive graph context. In a reflexive graph context, one concept covers each maximal clique independently of it size.}}
     \label{{tab:pgfca:clique-as-concepts}}
-\end{{figure}}
+\end{{table}}
     """
 
     print(template.strip().format('|'.join('c' for _ in sizes), ' & '.join(sizes), ' & '.join(concepts)))
@@ -38,7 +38,7 @@ def get_biclique_table(min_size:int, max_size:int):
                 print(pretty_concept(ext, int))
 
     template = r"""
-\begin{{figure}}[H]
+\begin{{table}}[H]
     \centering\begin{{tabular}}{{|l|{}|}}
         \hline
         biclique size & {} \\\hline
@@ -46,7 +46,7 @@ def get_biclique_table(min_size:int, max_size:int):
     \end{{tabular}}
     \caption{{Number of concepts produced by a biclique of given size in a reflexive graph context. Biclique size refers to the number of nodes in \textit{{each}} set. In a non-reflexive graph context, one concept covers each maximal biclique independently of it size.}}
     \label{{tab:pgfca:biclique-as-concepts}}
-\end{{figure}}
+\end{{table}}
     """
 
     print(template.strip().format('|'.join('c' for _ in sizes), ' & '.join(sizes), ' & '.join(concepts)))
